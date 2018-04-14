@@ -5,4 +5,7 @@
 
 protocol SplashViewMask: BaseViewMask {
 
+    func startAnimation()
+
+    func stopAnimation()
 }
