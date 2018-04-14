@@ -10,12 +10,16 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+#if DEV
+        print("\nDevelopment\n")
+#endif
+
+        styleNavigationBar()
+
         return true
     }
 
@@ -40,7 +44,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
+//MARK: Private methods
 
+private extension AppDelegate {
+
+    func styleNavigationBar() {
+        UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName:"ic_chevron_left")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = #imageLiteral(resourceName:"ic_chevron_left")
+        UIBarButtonItem.appearance().setTitleTextAttributes(Attributes.getBody1ColoredAttributes(), for: .normal)
+        UINavigationBar.appearance().tintColor = UIColor.blue
+        UINavigationBar.appearance().titleTextAttributes = Attributes.getHeader2Attributes()
+        UINavigationBar.appearance().barTintColor = UIColor.darkGrey
+        UINavigationBar.appearance().isTranslucent = false
+    }
 }
 
