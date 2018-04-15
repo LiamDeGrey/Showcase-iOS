@@ -7,6 +7,7 @@ import UIKit
 
 extension String {
     static let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+    static let mailTo = "mailto:%s"
 
     var localized: String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
@@ -14,6 +15,10 @@ extension String {
 
     var url: URL? {
         return URL(string: self)
+    }
+
+    var emailUrl: URL? {
+        return URL(string: String(format: String.mailTo, self))
     }
 
     func isValidEmail() -> Bool {
@@ -114,6 +119,13 @@ extension String {
     func convertToHeader2Error() -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         attributedString.addAttributes(attributes: Attributes.getHeader2ErrorAttributes())
+
+        return attributedString
+    }
+
+    func convertToLink() -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: self)
+        attributedString.addAttributes(attributes: Attributes.getLinkAttributes())
 
         return attributedString
     }

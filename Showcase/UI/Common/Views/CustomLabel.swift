@@ -20,7 +20,9 @@ internal class CustomLabel: UILabel {
 
              header2 = 30,
              header2Dark = 31,
-             header2Error = 32
+             header2Error = 32,
+
+             link = 40
     }
 
     @IBInspectable fileprivate var styleValue: Int = 0 {
@@ -78,6 +80,9 @@ private extension CustomLabel {
         case .header2Error:
             applyStyleHeader2Error()
             break
+        case .link:
+            applyStyleLink()
+            break
         }
     }
 
@@ -123,5 +128,9 @@ private extension CustomLabel {
 
     func applyStyleHeader2Error() {
         attributedText = text?.convertToHeader2Error()
+    }
+
+    func applyStyleLink() {
+        attributedText = text?.convertToLink()
     }
 }

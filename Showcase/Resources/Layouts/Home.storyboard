@@ -108,13 +108,98 @@
                     <view key="view" contentMode="scaleToFill" id="Kcz-W4-VSK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toe-sQ-7ao">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRL-S5-gbp" customClass="CustomLabel" customModule="Showcase" customModuleProvider="target">
+                                        <rect key="frame" x="36" y="36" width="303" height="223.5"/>
+                                        <string key="text">Showcase-iOS is an incredibly simple sample of how I make iOS applications. On inspection of the source code you'll notice the project is completely based on Swift, and uses RxSwift where observers are required (Namely network requests). I plan on updating this application regularly to ensure it keeps up-to-date with the latest trends and technologies. Check back later to see how it develops!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3ic-bi-ap0">
+                                        <rect key="frame" x="36" y="267.5" width="303" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itb-ZI-Xac">
+                                                <rect key="frame" x="0.0" y="0.0" width="35.5" height="50"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXh-0d-ZJk" customClass="CustomLabel" customModule="Showcase" customModuleProvider="target">
+                                                <rect key="frame" x="35.5" y="15" width="50" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="liam.degrey@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-tO-be1" customClass="CustomLabel" customModule="Showcase" customModuleProvider="target">
+                                                <rect key="frame" x="85.5" y="15" width="182.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                                        <integer key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="799-0d-JKa" appends="YES" id="YU0-uv-ef3"/>
+                                                </connections>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHq-tJ-Hsy">
+                                                <rect key="frame" x="268" y="0.0" width="35" height="50"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZHq-tJ-Hsy" firstAttribute="width" secondItem="Itb-ZI-Xac" secondAttribute="width" id="BEX-tR-hJf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3ic-bi-ap0" firstAttribute="top" secondItem="KRL-S5-gbp" secondAttribute="bottom" constant="8" id="3U4-FA-GFE"/>
+                                    <constraint firstAttribute="bottom" secondItem="3ic-bi-ap0" secondAttribute="bottom" constant="36" id="C6u-3a-afF"/>
+                                    <constraint firstItem="3ic-bi-ap0" firstAttribute="trailing" secondItem="Toe-sQ-7ao" secondAttribute="trailing" constant="36" id="O4i-t4-ab1"/>
+                                    <constraint firstItem="3ic-bi-ap0" firstAttribute="leading" secondItem="Toe-sQ-7ao" secondAttribute="leading" constant="36" id="YQX-hQ-Wvi"/>
+                                    <constraint firstItem="KRL-S5-gbp" firstAttribute="leading" secondItem="Toe-sQ-7ao" secondAttribute="leading" constant="36" id="bni-bi-3O8"/>
+                                    <constraint firstItem="KRL-S5-gbp" firstAttribute="trailing" secondItem="Toe-sQ-7ao" secondAttribute="trailing" constant="36" id="jK7-EQ-TE0"/>
+                                    <constraint firstItem="KRL-S5-gbp" firstAttribute="top" secondItem="Toe-sQ-7ao" secondAttribute="top" constant="36" id="s29-Vw-iH1"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Toe-sQ-7ao" firstAttribute="top" secondItem="mCh-OM-kqF" secondAttribute="top" id="4l8-fs-qdY"/>
+                            <constraint firstItem="Toe-sQ-7ao" firstAttribute="leading" secondItem="mCh-OM-kqF" secondAttribute="leading" id="IIc-OU-jrZ"/>
+                            <constraint firstItem="KRL-S5-gbp" firstAttribute="leading" secondItem="mCh-OM-kqF" secondAttribute="leading" constant="36" id="Rz0-Mq-Y2v"/>
+                            <constraint firstItem="mCh-OM-kqF" firstAttribute="trailing" secondItem="3ic-bi-ap0" secondAttribute="trailing" constant="36" id="UXd-z2-OGp"/>
+                            <constraint firstItem="Toe-sQ-7ao" firstAttribute="bottom" secondItem="mCh-OM-kqF" secondAttribute="bottom" id="W78-Bx-Be3"/>
+                            <constraint firstItem="3ic-bi-ap0" firstAttribute="leading" secondItem="mCh-OM-kqF" secondAttribute="leading" constant="36" id="XH3-R3-PGQ"/>
+                            <constraint firstItem="Toe-sQ-7ao" firstAttribute="trailing" secondItem="mCh-OM-kqF" secondAttribute="trailing" id="bCW-4e-DnR"/>
+                            <constraint firstItem="mCh-OM-kqF" firstAttribute="trailing" secondItem="KRL-S5-gbp" secondAttribute="trailing" constant="36" id="mCx-OX-zwx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mCh-OM-kqF"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="dei-Fy-xD3" customClass="CustomNavigationItem" customModule="Showcase" customModuleProvider="target">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xtD-ji-nfV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="TW6-tO-be1" id="2S5-v3-rHC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDZ-5b-ZXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="799-0d-JKa">
+                    <connections>
+                        <action selector="onEmailClicked:" destination="H2N-iX-4a3" id="s4x-94-n28"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="57" y="833"/>
         </scene>

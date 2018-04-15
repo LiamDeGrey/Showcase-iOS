@@ -8,6 +8,7 @@ import UIKit
 class AboutViewController: BaseViewController {
     fileprivate let presenter = AboutPresenter()
 
+    @IBOutlet fileprivate weak var emailLabel: CustomLabel!
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -42,6 +43,9 @@ class AboutViewController: BaseViewController {
 
 private extension AboutViewController {
 
+    @IBAction func onEmailClicked(_ sender: Any) {
+        presenter.handleEmailClicked(email: emailLabel?.text)
+    }
 }
 
 //MARK: ViewMask methods

@@ -12,6 +12,15 @@ class AboutPresenter: BasePresenter {
     }
 }
 
+//MARK: Presenter methods
+
+extension AboutPresenter {
+
+    func handleEmailClicked(email: String?) {
+        email?.emailUrl?.open()
+    }
+}
+
 //MARK: Private methods
 
 private extension AboutPresenter {
