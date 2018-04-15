@@ -1,14 +1,12 @@
 //
-// Created by Liam De Grey on 14/04/18.
+// Created by Liam De Grey on 15/04/18.
 // Copyright (c) 2018 liamdegrey. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: BaseViewController {
-    @IBOutlet fileprivate weak var drawerView: DrawerView!
-
-    fileprivate let presenter = HomePresenter()
+class SearchViewController: BaseViewController {
+    fileprivate let presenter = SearchPresenter()
 
 
     required init?(coder aDecoder: NSCoder) {
@@ -30,15 +28,11 @@ class HomeViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        drawerView.setup(with: self)
-
         presenter.viewAppeared()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-
-        drawerView.closeDrawer()
 
         presenter.viewDisappeared()
     }
@@ -48,32 +42,14 @@ class HomeViewController: BaseViewController {
     }
 }
 
-extension HomeViewController: DrawerViewCallbacks {
-
-    func onAboutClicked() {
-        presenter.handleAboutClicked()
-    }
-
-    func onAcknowledgementsClicked() {
-        presenter.handleAcknowledgementsClicked()
-    }
-
-    func onLikedTheSplashClicked() {
-        presenter.handleLikedTheSplashClicked()
-    }
-}
-
 //MARK: Private methods
 
-private extension HomeViewController {
+private extension SearchViewController {
 
-    @IBAction func onMenuClicked(_ sender: Any) {
-        drawerView.toggleDrawer()
-    }
 }
 
 //MARK: ViewMask methods
 
-extension HomeViewController: HomeViewMask {
+extension SearchViewController: SearchViewMask {
 
 }

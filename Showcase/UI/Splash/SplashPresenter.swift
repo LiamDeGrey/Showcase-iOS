@@ -7,7 +7,6 @@ class SplashPresenter: BasePresenter {
     fileprivate let STANDARD_DISPLAY_TIME = 1.0
     fileprivate let ANIMATION_DISPLAY_TIME = 2.5
 
-
     weak var view: SplashViewMask?
 
     override func viewAppeared() {

@@ -33,15 +33,119 @@
                     <view key="view" contentMode="scaleToFill" id="cuf-wi-rdo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8n-UE-RkH" customClass="DrawerView" customModule="Showcase" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBA-Hv-kVq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                    </view>
+                                </subviews>
+                                <connections>
+                                    <outlet property="contentView" destination="PBA-Hv-kVq" id="g8f-JJ-5B1"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="z8n-UE-RkH" secondAttribute="trailing" id="2dQ-Rc-y4C"/>
+                            <constraint firstItem="PBA-Hv-kVq" firstAttribute="bottom" secondItem="EXY-tp-3m7" secondAttribute="bottom" id="KjV-nf-nhu"/>
+                            <constraint firstItem="z8n-UE-RkH" firstAttribute="leading" secondItem="cuf-wi-rdo" secondAttribute="leading" id="L5D-oa-AaC"/>
+                            <constraint firstItem="PBA-Hv-kVq" firstAttribute="trailing" secondItem="EXY-tp-3m7" secondAttribute="trailing" id="RWE-WB-Ic4"/>
+                            <constraint firstItem="EXY-tp-3m7" firstAttribute="top" secondItem="z8n-UE-RkH" secondAttribute="top" id="WjE-lQ-Vf5"/>
+                            <constraint firstItem="PBA-Hv-kVq" firstAttribute="top" secondItem="EXY-tp-3m7" secondAttribute="top" id="Ylh-00-o0n"/>
+                            <constraint firstAttribute="bottom" secondItem="z8n-UE-RkH" secondAttribute="bottom" id="Zso-ZY-0QU"/>
+                            <constraint firstItem="PBA-Hv-kVq" firstAttribute="leading" secondItem="EXY-tp-3m7" secondAttribute="leading" id="f2r-wF-Oz7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EXY-tp-3m7"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Home" id="zwj-ev-cZe" customClass="CustomNavigationItem" customModule="Showcase" customModuleProvider="target">
                         <barButtonItem key="backBarButtonItem" title="Back" id="s3n-xS-qOe"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_menu" id="44i-cb-ac6">
+                            <connections>
+                                <action selector="onMenuClicked:" destination="qfM-lD-eog" id="qIf-ht-6Jk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ic_search" id="fCj-H4-XD8">
+                            <connections>
+                                <segue destination="0DK-s6-fsh" kind="show" id="Qaf-8t-m8c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="drawerView" destination="z8n-UE-RkH" id="a9t-7T-AEX"/>
+                        <segue destination="H2N-iX-4a3" kind="show" identifier="homeToAbout" id="BnJ-BT-tAC"/>
+                        <segue destination="XdV-7n-zf8" kind="show" identifier="homeToAcknowledgements" id="fp9-lE-NlB"/>
+                        <segue destination="ovT-dF-ien" kind="show" identifier="homeToSplash" customClass="ReplaceSegue" customModule="Showcase" customModuleProvider="target" id="E4r-GK-kYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMd-VY-mKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="90"/>
         </scene>
+        <!--Search-->
+        <scene sceneID="CXK-wA-PsS">
+            <objects>
+                <viewController id="0DK-s6-fsh" customClass="SearchViewController" customModule="Showcase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iSb-ey-JBf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6ev-va-a2m"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="R3h-Rv-Ubz" customClass="CustomNavigationItem" customModule="Showcase" customModuleProvider="target">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="YOR-79-n6l"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QAK-Nz-ohW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="90"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="Ab7-lB-nBG">
+            <objects>
+                <viewController id="H2N-iX-4a3" customClass="AboutViewController" customModule="Showcase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kcz-W4-VSK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mCh-OM-kqF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="dei-Fy-xD3" customClass="CustomNavigationItem" customModule="Showcase" customModuleProvider="target">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="xtD-ji-nfV"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDZ-5b-ZXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="833"/>
+        </scene>
+        <!--Acknowledgements-->
+        <scene sceneID="4Sv-JW-wjm">
+            <objects>
+                <viewController id="XdV-7n-zf8" customClass="AcknowledgementsViewController" customModule="Showcase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P7F-39-qtz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bbx-aM-PhJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Acknowledgements" id="dLn-Lq-J3p" customClass="CustomNavigationItem" customModule="Showcase" customModuleProvider="target">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="z6t-V4-ky2"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlY-nV-jVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="847"/>
+        </scene>
+        <!--Splash-->
+        <scene sceneID="tix-vq-Zwx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Splash" id="ovT-dF-ien" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T22-uc-W23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831" y="779"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ic_menu" width="20" height="20"/>
+        <image name="ic_search" width="20" height="20"/>
+    </resources>
 </document>

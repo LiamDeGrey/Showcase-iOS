@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawerView" customModule="Showcase" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundClickedRecognizer" destination="Cxq-Bn-TeT" id="6yV-tO-FEi"/>
+                <outlet property="backgroundView" destination="7lW-c6-dwj" id="jbG-Sp-IJF"/>
+                <outlet property="closeDrawerGestureRecognizer" destination="sc7-xb-NZg" id="3ky-w6-QcJ"/>
+                <outlet property="menuView" destination="BDP-y6-579" id="qb3-ZD-P6S"/>
+                <outlet property="menuViewLeadingConstraint" destination="Ktm-23-gaa" id="ddN-vk-eiC"/>
+                <outlet property="openDrawerGestureRecognizer" destination="laQ-vt-3Vo" id="3ir-D5-eQX"/>
+                <outlet property="rootView" destination="lfX-zU-AaC" id="oMF-R1-x61"/>
+                <outlet property="stretchView" destination="RFF-O6-nQ9" id="iwk-fo-fKi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lfX-zU-AaC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lW-c6-dwj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Cxq-Bn-TeT" appends="YES" id="a5L-pt-NKC"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFF-O6-nQ9" userLabel="Drawer Stretch View">
+                    <rect key="frame" x="0.0" y="0.0" width="281.5" height="667"/>
+                    <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDP-y6-579">
+                    <rect key="frame" x="0.0" y="0.0" width="281.5" height="667"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nIh-DK-KvF">
+                            <rect key="frame" x="36" y="287.5" width="209.5" height="92"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhO-ox-TrT" customClass="CustomButton" customModule="Showcase" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="209.5" height="30"/>
+                                    <state key="normal" title="About">
+                                        <color key="titleColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onAboutClicked:" destination="-1" eventType="touchUpInside" id="3eC-Q7-X79"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kh2-3c-WwI" userLabel="About Divider">
+                                    <rect key="frame" x="0.0" y="30" width="209.5" height="1"/>
+                                    <color key="backgroundColor" red="0.63529413940000001" green="0.99215692280000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="SmO-L5-NEZ"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLx-wN-H9n" customClass="CustomButton" customModule="Showcase" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="31" width="209.5" height="30"/>
+                                    <state key="normal" title="Acknowledgements">
+                                        <color key="titleColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onAcknowledgementsClicked:" destination="-1" eventType="touchUpInside" id="3A8-dC-Xvo"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye7-NO-ozh" userLabel="Acknowledgements Divider">
+                                    <rect key="frame" x="0.0" y="61" width="209.5" height="1"/>
+                                    <color key="backgroundColor" red="0.63529413940000001" green="0.99215692280000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="qdH-qN-Z3S"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQA-LO-mX9" customClass="CustomButton" customModule="Showcase" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="62" width="209.5" height="30"/>
+                                    <state key="normal" title="Liked the Splash?">
+                                        <color key="titleColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onLikedTheSplashClicked:" destination="-1" eventType="touchUpInside" id="2fd-qd-fVA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⌁ Created in full by Liam De Grey ⌁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ2-CO-j3L" customClass="CustomLabel" customModule="Showcase" customModuleProvider="target">
+                            <rect key="frame" x="16" y="630.5" width="249.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="IJ2-CO-j3L" firstAttribute="leading" secondItem="BDP-y6-579" secondAttribute="leading" constant="16" id="1wD-h3-jvG"/>
+                        <constraint firstAttribute="trailing" secondItem="IJ2-CO-j3L" secondAttribute="trailing" constant="16" id="Lwj-9O-kUj"/>
+                        <constraint firstItem="nIh-DK-KvF" firstAttribute="centerY" secondItem="BDP-y6-579" secondAttribute="centerY" id="jeJ-wy-fov"/>
+                        <constraint firstItem="nIh-DK-KvF" firstAttribute="centerX" secondItem="BDP-y6-579" secondAttribute="centerX" id="qHv-r7-YSK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="BDP-y6-579" firstAttribute="top" secondItem="lfX-zU-AaC" secondAttribute="top" id="0fq-AW-Y0A"/>
+                <constraint firstItem="rlq-5k-L56" firstAttribute="bottom" secondItem="IJ2-CO-j3L" secondAttribute="bottom" constant="16" id="3tR-V6-9FJ"/>
+                <constraint firstItem="BDP-y6-579" firstAttribute="bottom" secondItem="RFF-O6-nQ9" secondAttribute="bottom" id="69p-is-Mts"/>
+                <constraint firstAttribute="bottom" secondItem="BDP-y6-579" secondAttribute="bottom" id="DO8-Ea-es8"/>
+                <constraint firstItem="BDP-y6-579" firstAttribute="trailing" secondItem="RFF-O6-nQ9" secondAttribute="trailing" priority="999" id="EXi-3L-dGA"/>
+                <constraint firstItem="BDP-y6-579" firstAttribute="leading" secondItem="lfX-zU-AaC" secondAttribute="leading" id="Ktm-23-gaa" customClass="ObservableConstraint" customModule="Showcase" customModuleProvider="target"/>
+                <constraint firstItem="7lW-c6-dwj" firstAttribute="leading" secondItem="lfX-zU-AaC" secondAttribute="leading" id="PD2-WY-OQK"/>
+                <constraint firstAttribute="bottom" secondItem="7lW-c6-dwj" secondAttribute="bottom" id="XUV-wT-VmW"/>
+                <constraint firstItem="7lW-c6-dwj" firstAttribute="top" secondItem="lfX-zU-AaC" secondAttribute="top" id="Z83-ac-H4d"/>
+                <constraint firstItem="BDP-y6-579" firstAttribute="top" secondItem="RFF-O6-nQ9" secondAttribute="top" id="gwu-ru-KAr"/>
+                <constraint firstAttribute="trailing" secondItem="7lW-c6-dwj" secondAttribute="trailing" id="tyO-fT-DDk"/>
+                <constraint firstItem="BDP-y6-579" firstAttribute="width" secondItem="lfX-zU-AaC" secondAttribute="width" multiplier="0.75" id="vK3-nf-kDf"/>
+                <constraint firstItem="RFF-O6-nQ9" firstAttribute="leading" secondItem="lfX-zU-AaC" secondAttribute="leading" id="vYC-ol-0Kk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="rlq-5k-L56"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="sc7-xb-NZg" appends="YES" id="WFd-Mm-k2F"/>
+            </connections>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="sc7-xb-NZg">
+            <connections>
+                <action selector="onDrawerSwiping:" destination="-1" id="IIV-iu-XGP"/>
+            </connections>
+        </panGestureRecognizer>
+        <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="laQ-vt-3Vo">
+            <rectEdge key="edges" left="YES"/>
+            <connections>
+                <action selector="onDrawerSwiping:" destination="-1" id="Tu0-Zw-zqu"/>
+            </connections>
+        </screenEdgePanGestureRecognizer>
+        <tapGestureRecognizer id="Cxq-Bn-TeT">
+            <connections>
+                <action selector="onBackgroundTapped:" destination="-1" id="XU5-Uy-iki"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

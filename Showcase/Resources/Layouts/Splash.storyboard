@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8hl-bF-LeQ">
-                                <rect key="frame" x="99" y="314.5" width="179" height="38.5"/>
+                                <rect key="frame" x="98" y="314.5" width="179" height="38.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCQ-0g-9uX" customClass="CustomLabel" customModule="Showcase" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="19.5" height="38.5"/>

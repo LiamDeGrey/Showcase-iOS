@@ -131,12 +131,19 @@ extension UIView {
 
 extension UIView {
 
-    func loadNib(nibName: String = String(describing: type(of: self))) {
-        let nibView = Bundle.main.loadNibNamed(nibName, owner: self, options: nil)![0]
+    @objc func loadNib() {
+        loadNib(nibName: getNibName())
+    }
 
-        if let nibView = nibView as? UIView {
+    func loadNib(nibName: String) {
+        if let nibView =
+        Bundle.main.loadNibNamed(nibName, owner: self, options: nil)?.first as? UIView {
             fillWithView(view: nibView)
         }
+    }
+
+    @objc func getNibName() -> String {
+        return String(describing: type(of: self))
     }
 }
 
