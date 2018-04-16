@@ -25,6 +25,8 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchInput.becomeFirstResponder()
+
         jokesList.dataSource = jokesAdapter
         jokesList.delegate = jokesAdapter
         jokesList.estimatedRowHeight = 50.0
