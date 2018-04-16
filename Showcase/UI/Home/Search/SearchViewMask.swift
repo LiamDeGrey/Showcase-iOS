@@ -5,4 +5,5 @@
 
 protocol SearchViewMask: BaseViewMask {
 
+    func updateJokes(_ jokes: [Joke])
 }

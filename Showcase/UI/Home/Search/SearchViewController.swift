@@ -6,6 +6,13 @@
 import UIKit
 
 class SearchViewController: BaseViewController {
+    @IBOutlet fileprivate weak var searchInput: CustomTextField!
+    @IBOutlet fileprivate weak var noContentView: CustomLabel!
+    @IBOutlet fileprivate weak var inlineLoadingView: InlineLoadingView!
+    @IBOutlet fileprivate weak var jokesList: UITableView!
+
+    fileprivate lazy var jokesAdapter = JokesAdapter(callbacks: self)
+
     fileprivate let presenter = SearchPresenter()
 
 
@@ -17,6 +24,15 @@ class SearchViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        jokesList.dataSource = jokesAdapter
+        jokesList.delegate = jokesAdapter
+        jokesList.estimatedRowHeight = 50.0
+        jokesList.rowHeight = UITableViewAutomaticDimension
+        let cellNib = UINib(nibName: String(describing: JokeCell.self), bundle: nil)
+        jokesList.register(cellNib, forCellReuseIdentifier: ReuseIdentifier.jokeCell.rawValue)
+
+        presenter.setupTextWatcher(textInput: searchInput)
 
         presenter.viewLoaded()
     }
@@ -37,19 +53,32 @@ class SearchViewController: BaseViewController {
         presenter.viewDisappeared()
     }
 
-    override func hasNavigationBackButton() -> Bool {
-        return false
+    override func startLoading() {
+        noContentView.isHidden = true
+        jokesList.isHidden = true
+        inlineLoadingView.startLoading()
+    }
+
+    override func stopLoading() {
+        inlineLoadingView.stopLoading()
     }
 }
 
-//MARK: Private methods
+extension SearchViewController: JokesAdapterCallbacks {
 
-private extension SearchViewController {
-
+    func reloadTableView() {
+        jokesList.reloadData()
+    }
 }
 
 //MARK: ViewMask methods
 
 extension SearchViewController: SearchViewMask {
 
+    func updateJokes(_ jokes: [Joke]) {
+        jokesAdapter.updateJokes(jokes: jokes)
+
+        noContentView.isHidden = searchInput.text!.isEmpty || !jokes.isEmpty
+        jokesList.isHidden = !noContentView.isHidden
+    }
 }

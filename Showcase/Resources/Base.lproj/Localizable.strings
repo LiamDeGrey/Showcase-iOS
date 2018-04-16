@@ -5,3 +5,6 @@
   Created by Liam De Grey on 14/04/18.
   Copyright © 2018 liamdegrey. All rights reserved.
 */
+
+/* Search strings */
+"search_searchHint" = "Enter search term";

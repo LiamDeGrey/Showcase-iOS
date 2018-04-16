@@ -26,7 +26,7 @@ extension UIFont {
         return UIFont(name: FONT_LATO_BOLD, size: Dimensions.textSize_20)!
     }
 
-    static func getContentUnavailableLogoFont(forSize: CGFloat) -> UIFont {
+    static func getCharacterViewFont(forSize: CGFloat) -> UIFont {
         return UIFont(name: FONT_LATO_BOLD, size: forSize)!
     }
 }

@@ -57,6 +57,16 @@ class BaseViewController: UIViewController {
 
         view.endEditing(true)
     }
+
+    func startLoading() {
+        disableNavigationBar(disable: true)
+        loadingView.startLoading(parentView: view)
+    }
+
+    func stopLoading() {
+        disableNavigationBar(disable: false)
+        loadingView.stopLoading()
+    }
 }
 
 //MARK: Utility methods
@@ -76,11 +86,9 @@ extension BaseViewController: BaseViewMask {
 
     func setLoading(loading: Bool) {
         if loading {
-            disableNavigationBar(disable: true)
-            loadingView.startLoading(parentView: view)
+            startLoading()
         } else {
-            disableNavigationBar(disable: false)
-            loadingView.stopLoading()
+            stopLoading()
         }
     }
 

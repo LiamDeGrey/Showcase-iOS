@@ -31,7 +31,7 @@ class Attributes {
     static func getBody1ColoredAttributes() -> [NSAttributedStringKey: Any] {
         return [
             NSAttributedStringKey.font: UIFont.body1Font(),
-            NSAttributedStringKey.foregroundColor: UIColor.blue
+            NSAttributedStringKey.foregroundColor: UIColor.skyBlue
         ]
     }
 
@@ -52,7 +52,7 @@ class Attributes {
     static func getBody2ColoredAttributes() -> [NSAttributedStringKey: Any] {
         return [
             NSAttributedStringKey.font: UIFont.body2Font(),
-            NSAttributedStringKey.foregroundColor: UIColor.blue
+            NSAttributedStringKey.foregroundColor: UIColor.skyBlue
         ]
     }
 
@@ -87,23 +87,17 @@ class Attributes {
     static func getLinkAttributes() -> [NSAttributedStringKey: Any] {
         return [
             NSAttributedStringKey.font: UIFont.body1Font(),
-            NSAttributedStringKey.foregroundColor: UIColor.blue,
-            NSAttributedStringKey.underlineColor: UIColor.blue,
+            NSAttributedStringKey.foregroundColor: UIColor.skyBlue,
+            NSAttributedStringKey.underlineColor: UIColor.skyBlue,
             NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
         ]
     }
 
-    static func getContentUnavailableAttributes(forSize: CGFloat) -> [NSAttributedStringKey: Any] {
+    static func getCharacterViewAttributes(forSize: CGFloat) -> [NSAttributedStringKey: Any] {
         return [
-            NSAttributedStringKey.font: UIFont.getContentUnavailableLogoFont(forSize: forSize),
-            NSAttributedStringKey.foregroundColor: UIColor.blue
-        ]
-    }
-
-    static func getContentUnavailableOutlineAttributes(forSize: CGFloat) -> [NSAttributedStringKey: Any] {
-        return [
-            NSAttributedStringKey.font: UIFont.getContentUnavailableLogoFont(forSize: forSize),
-            NSAttributedStringKey.foregroundColor: UIColor.darkGrey
+            NSAttributedStringKey.font: UIFont.getCharacterViewFont(forSize: forSize),
+            NSAttributedStringKey.foregroundColor: UIColor.skyBlue,
+            NSAttributedStringKey.strokeColor: UIColor.darkGrey
         ]
     }
 }

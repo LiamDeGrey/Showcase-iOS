@@ -27,6 +27,7 @@ struct Dimensions {
 
     //Common dimensions
     static let cornerRadius: CGFloat = 2
+    static let cornerRadius_extra: CGFloat = 5
     static let strokeWidth: CGFloat = 1
     static let elevation: CGFloat = 20
 }

@@ -89,15 +89,15 @@ internal class CustomButton: UIButton {
 private extension CustomButton {
 
     func applyStylePrimary() {
-        normalBackgroundColor = .blue
+        normalBackgroundColor = .skyBlue
         normalBorderColor = .black
         highlightedBackgroundColor = .clear
-        highlightedBorderColor = .blue
+        highlightedBorderColor = .skyBlue
         disabledBackgroundColor = .lightGrey
         disabledBorderColor = .disabledGrey
 
         setTitleColor(.mediumGrey, for: .normal)
-        setTitleColor(.blue, for: .highlighted)
+        setTitleColor(.skyBlue, for: .highlighted)
         setTitleColor(.disabledGrey, for: .disabled)
 
         titleLabel?.font = UIFont.body1Font()
@@ -113,13 +113,13 @@ private extension CustomButton {
 
     func applyStyleSecondary() {
         normalBackgroundColor = .clear
-        normalBorderColor = .blue
-        highlightedBackgroundColor = .blue
+        normalBorderColor = .skyBlue
+        highlightedBackgroundColor = .skyBlue
         highlightedBorderColor = .black
         disabledBackgroundColor = .lightGrey
         disabledBorderColor = .disabledGrey
 
-        setTitleColor(.blue, for: .normal)
+        setTitleColor(.skyBlue, for: .normal)
         setTitleColor(.black, for: .highlighted)
         setTitleColor(.disabledGrey, for: .disabled)
 
@@ -143,7 +143,7 @@ private extension CustomButton {
         disabledBorderColor = .clear
 
         setTitleColor(.lightGrey, for: .normal)
-        setTitleColor(.blue, for: .highlighted)
+        setTitleColor(.skyBlue, for: .highlighted)
         setTitleColor(.mediumGrey, for: .disabled)
 
         titleLabel?.font = UIFont.body1Font()

@@ -3,9 +3,11 @@
 // Copyright (c) 2018 liamdegrey. All rights reserved.
 //
 
-import UIKit
+import WebKit
 
 class AcknowledgementsViewController: BaseViewController {
+    @IBOutlet fileprivate weak var webView: WKWebView!
+
     fileprivate let presenter = AcknowledgementsPresenter()
 
 
@@ -23,6 +25,8 @@ class AcknowledgementsViewController: BaseViewController {
 
     deinit {
         presenter.viewDestroyed()
+
+        webView.stopLoading()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -47,5 +51,9 @@ private extension AcknowledgementsViewController {
 //MARK: ViewMask methods
 
 extension AcknowledgementsViewController: AcknowledgementsViewMask {
+
+    func setWebUrl(url: URL) {
+        webView.load(URLRequest(url: url))
+    }
 
 }

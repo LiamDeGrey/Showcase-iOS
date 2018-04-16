@@ -10,7 +10,7 @@ extension UIColor {
     static let darkGrey = buildColor(red: 38, green: 38, blue: 38, alpha: 1)
     static let mediumGrey = buildColor(red: 64, green: 64, blue: 64, alpha: 1)
     static let lightGrey = buildColor(red: 191, green: 191, blue: 191, alpha: 1)
-    static let blue = buildColor(red: 162, green: 253, blue: 255, alpha: 1)
+    static let skyBlue = buildColor(red: 162, green: 253, blue: 255, alpha: 1)
 
     //Secondary palette
     static let errorRed = buildColor(red: 189, green: 84, blue: 89, alpha: 1)

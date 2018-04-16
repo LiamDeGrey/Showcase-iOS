@@ -3,6 +3,10 @@
 // Copyright (c) 2018 liamdegrey. All rights reserved.
 //
 
+import Foundation
+
 protocol AcknowledgementsViewMask: BaseViewMask {
+
+    func setWebUrl(url: URL)
 
 }

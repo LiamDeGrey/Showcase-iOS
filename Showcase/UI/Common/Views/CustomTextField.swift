@@ -86,7 +86,7 @@ internal class CustomTextField: UITextField {
 
         font = UIFont.body1Font()
         textColor = UIColor.lightGrey
-        tintColor = UIColor.blue
+        tintColor = UIColor.skyBlue
 
         keyboardAppearance = .dark
         clearButtonMode = .always
@@ -111,7 +111,7 @@ private extension CustomTextField {
         autocapitalizationType = .words
         autocorrectionType = .yes
         spellCheckingType = .yes
-        placeholder = placeholder ?? "search_searchHint".localized
+        placeholder = "search_searchHint".localized
 
         leftIcon = UIImage(imageLiteralResourceName: "ic_search")
     }

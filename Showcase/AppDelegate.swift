@@ -54,7 +54,7 @@ private extension AppDelegate {
         UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName:"ic_chevron_left")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = #imageLiteral(resourceName:"ic_chevron_left")
         UIBarButtonItem.appearance().setTitleTextAttributes(Attributes.getBody1ColoredAttributes(), for: .normal)
-        UINavigationBar.appearance().tintColor = UIColor.blue
+        UINavigationBar.appearance().tintColor = UIColor.skyBlue
         UINavigationBar.appearance().titleTextAttributes = Attributes.getHeader2Attributes()
         UINavigationBar.appearance().barTintColor = UIColor.darkGrey
         UINavigationBar.appearance().isTranslucent = false

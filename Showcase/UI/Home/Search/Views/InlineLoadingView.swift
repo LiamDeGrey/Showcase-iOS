@@ -1,11 +1,11 @@
 //
-// Created by Liam De Grey on 14/04/18.
+// Created by Liam De Grey on 16/04/18.
 // Copyright (c) 2018 liamdegrey. All rights reserved.
 //
 
 import UIKit
 
-class LoadingView: BaseUIView {
+class InlineLoadingView: BaseUIView {
     @IBOutlet fileprivate weak var spinnerView: UIActivityIndicatorView!
 
 
@@ -18,15 +18,15 @@ class LoadingView: BaseUIView {
 
 //MARK: Loading methods
 
-extension LoadingView {
+extension InlineLoadingView {
 
-    func startLoading(parentView: UIView) {
+    func startLoading() {
         spinnerView.startAnimating()
-        parentView.fillWithView(view: self)
+        isHidden = false
     }
 
     func stopLoading() {
         spinnerView.stopAnimating()
-        removeFromSuperview()
+        isHidden = true
     }
 }
