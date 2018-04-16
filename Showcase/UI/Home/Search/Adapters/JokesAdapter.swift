@@ -34,8 +34,7 @@ extension JokesAdapter: UITableViewDataSource, UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellId = ReuseIdentifier.jokeCell.rawValue
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JokeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.jokeCell.rawValue, for: indexPath) as! JokeCell
 
         let joke = jokes[indexPath.row]
 

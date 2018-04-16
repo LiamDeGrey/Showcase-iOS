@@ -9,12 +9,6 @@ class JokeCell: UITableViewCell {
     @IBOutlet fileprivate weak var characterView: CharacterView!
     @IBOutlet fileprivate weak var jokeLabel: CustomLabel!
 
-
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-        super.setHighlighted(highlighted, animated: animated)
-
-        backgroundColor = highlighted ? UIColor.mediumLightGrey : UIColor.clear
-    }
 }
 
 //MARK: Public methods

@@ -21,8 +21,6 @@
 		30294923208193550034DF65 /* lato_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3029491E208193550034DF65 /* lato_regular.ttf */; };
 		30294924208193550034DF65 /* lato_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3029491E208193550034DF65 /* lato_regular.ttf */; };
 		30685A3D208174E8002935FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B87AE52081733300E10E57 /* AppDelegate.swift */; };
-		30720FFB2083F6AD00087F12 /* JokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30720FFA2083F6AD00087F12 /* JokeCell.xib */; };
-		30720FFC2083F6AD00087F12 /* JokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30720FFA2083F6AD00087F12 /* JokeCell.xib */; };
 		30B87AE62081733300E10E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B87AE52081733300E10E57 /* AppDelegate.swift */; };
 		30D5BD0620842B9F0023319C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D5BD0520842B9F0023319C /* LoadingView.xib */; };
 		30D5BD0720842B9F0023319C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D5BD0520842B9F0023319C /* LoadingView.xib */; };
@@ -150,7 +148,6 @@
 		3029491E208193550034DF65 /* lato_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lato_regular.ttf; sourceTree = "<group>"; };
 		30685A46208174E8002935FE /* Showcase-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Showcase-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30685A47208174E9002935FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/liamdg/Projects/Showcase-iOS/Showcase-Dev/Info.plist"; sourceTree = "<absolute>"; };
-		30720FFA2083F6AD00087F12 /* JokeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeCell.xib; sourceTree = "<group>"; };
 		30B87AE22081733300E10E57 /* Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B87AE52081733300E10E57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30B87AF12081733500E10E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -334,7 +331,6 @@
 				BE40CB1BB8E9BF913EF89839 /* Launch.storyboard */,
 				3029491920818E830034DF65 /* Home.storyboard */,
 				30236FA72082BD360049D817 /* DrawerView.xib */,
-				30720FFA2083F6AD00087F12 /* JokeCell.xib */,
 				30D5BD0520842B9F0023319C /* LoadingView.xib */,
 				30D5BD0820842C010023319C /* InlineLoadingView.xib */,
 			);
@@ -622,7 +618,6 @@
 				BE40C3A35256E5C574AFB894 /* Assets.xcassets in Resources */,
 				30236FA92082BD360049D817 /* DrawerView.xib in Resources */,
 				30294922208193550034DF65 /* lato_light.ttf in Resources */,
-				30720FFC2083F6AD00087F12 /* JokeCell.xib in Resources */,
 				3029491820817B870034DF65 /* Localizable.strings in Resources */,
 				BE40C4826330D892C141659D /* Splash.storyboard in Resources */,
 				3029491B20818E830034DF65 /* Home.storyboard in Resources */,
@@ -642,7 +637,6 @@
 				BE40CA5A57A1277BA732F9E6 /* Assets.xcassets in Resources */,
 				30236FA82082BD360049D817 /* DrawerView.xib in Resources */,
 				30294921208193550034DF65 /* lato_light.ttf in Resources */,
-				30720FFB2083F6AD00087F12 /* JokeCell.xib in Resources */,
 				3029491720817B870034DF65 /* Localizable.strings in Resources */,
 				BE40CD0E08C5470DB7F46546 /* Splash.storyboard in Resources */,
 				3029491A20818E830034DF65 /* Home.storyboard in Resources */,

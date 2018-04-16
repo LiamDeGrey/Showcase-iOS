@@ -228,10 +228,53 @@
                                     <constraint firstAttribute="height" constant="150" id="Cqo-0B-rQt"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ovD-pi-M7o">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ovD-pi-M7o">
                                 <rect key="frame" x="0.0" y="117" width="375" height="506"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="jokeCell" id="Ogq-zF-eEP" customClass="JokeCell" customModule="Showcase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ogq-zF-eEP" id="hAW-KL-Fld">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTS-8o-bAX" customClass="CharacterView" customModule="Showcase" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="37.5" height="27.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJw-vZ-PS9" customClass="CustomLabel" customModule="Showcase" customModuleProvider="target">
+                                                    <rect key="frame" x="53.5" y="8" width="313.5" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="styleValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="VJw-vZ-PS9" firstAttribute="leading" secondItem="aTS-8o-bAX" secondAttribute="trailing" constant="8" id="7xM-v6-bgD"/>
+                                                <constraint firstItem="aTS-8o-bAX" firstAttribute="top" secondItem="hAW-KL-Fld" secondAttribute="top" constant="8" id="K2Q-Mj-bEq"/>
+                                                <constraint firstAttribute="bottom" secondItem="aTS-8o-bAX" secondAttribute="bottom" constant="8" id="K8a-qd-7wF"/>
+                                                <constraint firstAttribute="trailing" secondItem="VJw-vZ-PS9" secondAttribute="trailing" constant="8" id="LxT-Rl-heo"/>
+                                                <constraint firstAttribute="bottom" secondItem="VJw-vZ-PS9" secondAttribute="bottom" constant="8" id="Nrt-7b-Qsy"/>
+                                                <constraint firstItem="aTS-8o-bAX" firstAttribute="leading" secondItem="hAW-KL-Fld" secondAttribute="leading" constant="8" id="P3X-HK-CRa"/>
+                                                <constraint firstItem="aTS-8o-bAX" firstAttribute="width" secondItem="hAW-KL-Fld" secondAttribute="width" multiplier="0.1" id="QaE-zc-bVP"/>
+                                                <constraint firstItem="VJw-vZ-PS9" firstAttribute="top" secondItem="hAW-KL-Fld" secondAttribute="top" constant="8" id="ekj-GM-fva"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="characterView" destination="aTS-8o-bAX" id="xsB-eR-kXC"/>
+                                            <outlet property="jokeLabel" destination="VJw-vZ-PS9" id="XBT-0I-sVq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <constraints>

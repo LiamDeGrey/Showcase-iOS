@@ -29,8 +29,6 @@ class SearchViewController: BaseViewController {
         jokesList.delegate = jokesAdapter
         jokesList.estimatedRowHeight = 50.0
         jokesList.rowHeight = UITableViewAutomaticDimension
-        let cellNib = UINib(nibName: String(describing: JokeCell.self), bundle: nil)
-        jokesList.register(cellNib, forCellReuseIdentifier: ReuseIdentifier.jokeCell.rawValue)
 
         presenter.setupTextWatcher(textInput: searchInput)
 

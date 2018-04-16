@@ -33,8 +33,6 @@ class CharacterView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
 
-        print("\(hashValue) Draw Rect")
-
         //Draw background
         let path = UIBezierPath(roundedRect: rect, cornerRadius: Dimensions.cornerRadius_extra)
         path.lineWidth = Dimensions.strokeWidth
