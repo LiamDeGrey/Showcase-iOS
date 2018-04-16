@@ -5,4 +5,5 @@
 
 protocol HomeViewMask: BaseViewMask {
 
+    func setJokes(_ jokes: [Joke])
 }

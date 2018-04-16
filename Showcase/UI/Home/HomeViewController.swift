@@ -7,6 +7,10 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     @IBOutlet fileprivate weak var drawerView: DrawerView!
+    @IBOutlet fileprivate weak var jokesPager: UICollectionView!
+    @IBOutlet fileprivate weak var jokesPagerIndicator: UIPageControl!
+
+    fileprivate lazy var jokesPagerAdapter = JokesPagerAdapter(callbacks: self)
 
     fileprivate let presenter = HomePresenter()
 
@@ -19,6 +23,8 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupJokesPager()
 
         presenter.viewLoaded()
     }
@@ -63,6 +69,19 @@ extension HomeViewController: DrawerViewCallbacks {
     }
 }
 
+//MARK: jokesPager methods
+
+extension HomeViewController: JokesPagerAdapterCallbacks {
+
+    func onPageChanged(page: Int) {
+        jokesPagerIndicator.currentPage = page
+    }
+
+    func reloadJokes() {
+        jokesPager.reloadData()
+    }
+}
+
 //MARK: Private methods
 
 private extension HomeViewController {
@@ -70,10 +89,21 @@ private extension HomeViewController {
     @IBAction func onMenuClicked(_ sender: Any) {
         drawerView.toggleDrawer()
     }
+
+    func setupJokesPager() {
+        jokesPager.decelerationRate = UIScrollViewDecelerationRateFast
+        jokesPager.dataSource = jokesPagerAdapter
+        jokesPager.delegate = jokesPagerAdapter
+        jokesPagerIndicator.transform = CGAffineTransform(scaleX: 1.7, y: 1.7)
+    }
 }
 
 //MARK: ViewMask methods
 
 extension HomeViewController: HomeViewMask {
 
+    func setJokes(_ jokes: [Joke]) {
+        jokesPagerAdapter.setJokes(jokes)
+        jokesPagerIndicator.numberOfPages = jokes.count
+    }
 }
